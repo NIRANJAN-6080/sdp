@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Billing System - Dr. Emmanuel Joy</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f6f9; color: #333; }
+        .container { max-width: 900px; margin: 30px auto; padding: 25px; background: white; border-radius: 8px; border: 1px solid #ddd; }
+        header { text-align: center; color: #1a365d; border-bottom: 2px solid #1a365d; padding-bottom: 15px; margin-bottom: 25px; }
+        header p { font-size: 14px; font-weight: bold; margin-top: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 25px; }
+        th, td { border: 1px solid #e2e8f0; padding: 12px; text-align: left; }
+        th { background-color: #f8fafc; font-weight: bold; color: #1a365d; }
+        .quantity-input { width: 60px; padding: 6px; text-align: center; }
+        #calculateBtn { background-color: #1a365d; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; float: right; }
+        #calculateBtn:hover { background-color: #2b6cb0; }
+        .summary { float: right; width: 300px; padding: 15px; border: 1px solid #ddd; border-radius: 6px; background: #f8fafc; margin-right: 20px; }
+        .summary p { display: flex; justify-content: space-between; margin: 8px 0; }
+        .grand-total { font-weight: bold; font-size: 18px; color: #1a365d; border-top: 1px solid #ccc; padding-top: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Department of M.Tech CSE</h1>
+            <h2>Lab Product Billing System (Exp 10)</h2>
+            <p>Convener: Dr. Emmanuel Joy, Associate Professor, SKCET</p>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Product Name</th>
+                    <th>Price (₹)</th>
+                    <th>Quantity</th>
+                    <th>Item Total (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SK-LP-01</td>
+                    <td>Developer Workstation Laptop</td>
+                    <td id="price1">125000.00</td>
+                    <td><input type="number" id="qty1" value="0" min="0" class="quantity-input"></td>
+                    <td id="total1">0.00</td>
+                </tr>
+                <tr>
+                    <td>SK-MN-02</td>
+                    <td>34-inch 4K UltraWide Monitor</td>
+                    <td id="price2">45000.00</td>
+                    <td><input type="number" id="qty2" value="0" min="0" class="quantity-input"></td>
+                    <td id="total2">0.00</td>
+                </tr>
+                <tr>
+                    <td>SK-KB-03</td>
+                    <td>Mechanical RGB Keyboard</td>
+                    <td id="price3">6500.00</td>
+                    <td><input type="number" id="qty3" value="0" min="0" class="quantity-input"></td>
+                    <td id="total3">0.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="calculateBtn">Calculate Bill</button>
+
+        <div class="summary">
+            <h3>Billing Summary</h3>
+            <p><span>Subtotal:</span> ₹<span id="subtotal">0.00</span></p>
+            <p><span>Tax (18% GST):</span> ₹<span id="tax">0.00</span></p>
+            <p class="grand-total"><span>Total Amount:</span> ₹<span id="grandTotal">0.00</span></p>
+        </div>
+    </div>
+
+    <script src="bill.js"></script>
+</body>
+</html>

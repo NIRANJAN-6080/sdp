@@ -2,6 +2,8 @@
  * Product Billing System - Dr. Emmanuel Joy
  * Experiment 10 (Robust JS Variables & DOM Calculation)
  */
+//Updated
+
 
 // 1. Constants
 const TAX_RATE = 0.18; // 18% GST
